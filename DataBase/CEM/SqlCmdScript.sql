@@ -42,7 +42,7 @@ CREATE TABLE LibeyUser(
 ) 
 GO
 INSERT INTO DocumentType VALUES (1,'Documento Nacional de Identidad')
-INSERT INTO DocumentType VALUES (1,'Registro Único de Contribuyente ')
+INSERT INTO DocumentType VALUES (2,'Registro Único de Contribuyente ')
 GO
  INSERT INTO Region VALUES ('01','Amazonas')
  INSERT INTO Region VALUES ('02','Ancash')
