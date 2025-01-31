@@ -25,4 +25,4 @@
 
 **DataBase (DataBase)**
 - SQLServer	
-	La base de datos se encuentra dockerizada, por lo que solo se necesitara crear la imagen e inicializar el contenedor en el computador local.
+	La base de datos se encuentra dockerizada, por lo que solo se necesitara crear la imagen e inicializar el contenedor en el computador local.# LibeyTechnicalPT
