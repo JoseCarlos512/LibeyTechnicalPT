@@ -5,7 +5,12 @@ namespace LibeyTechnicalTestDomain.LibeyUserAggregate.Application.Interfaces
 {
     public interface ILibeyUserRepository
     {
+        List<LibeyUserResponse> List();
         LibeyUserResponse FindResponse(string documentNumber);
         void Create(LibeyUser libeyUser);
+        void Update(LibeyUser libeyUser);
+        void Delete(LibeyUser libeyUser);
+        bool ExistsDocumentNumber(string documentNumber);
+        bool ExistsUbigeoCode(string ubigeoCode);
     }
 }
