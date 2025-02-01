@@ -87,7 +87,7 @@ export class UsermaintenanceComponent implements OnInit {
         this.Regions = regions;
       },
       (error) => {
-        console.error('Error al obtener los tipos de documento', error);
+        console.error('Error al obtener regiones', error);
       }
     );
   }
@@ -98,7 +98,7 @@ export class UsermaintenanceComponent implements OnInit {
         this.Provinces = provinces;
       },
       (error) => {
-        console.error('Error al obtener los tipos de documento', error);
+        console.error('Error al obtener provincias', error);
       }
     );
   }
@@ -109,7 +109,7 @@ export class UsermaintenanceComponent implements OnInit {
         this.Districts = districts;
       },
       (error) => {
-        console.error('Error al obtener los tipos de documento', error);
+        console.error('Error al obtener distritos', error);
       }
     );
   }
