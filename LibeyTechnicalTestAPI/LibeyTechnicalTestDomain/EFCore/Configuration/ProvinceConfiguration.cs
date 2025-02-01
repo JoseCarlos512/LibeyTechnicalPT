@@ -1,11 +1,13 @@
 ﻿using LibeyTechnicalTestDomain.LibeyUserAggregate.Domain;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+
 namespace LibeyTechnicalTestDomain.EFCore.Configuration;
-internal class LibeyUserConfiguration : IEntityTypeConfiguration<LibeyUser>
+
+internal class ProvinceConfiguration : IEntityTypeConfiguration<Province>
 {
-    public void Configure(EntityTypeBuilder<LibeyUser> builder)
+    public void Configure(EntityTypeBuilder<Province> builder)
     {
-        builder.ToTable("LibeyUser").HasKey(x => x.DocumentNumber);
+        builder.ToTable("Province").HasKey(x => x.ProvinceCode);
     }
 }

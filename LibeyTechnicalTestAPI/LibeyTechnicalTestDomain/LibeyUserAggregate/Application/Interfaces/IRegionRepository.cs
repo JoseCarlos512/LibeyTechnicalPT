@@ -2,7 +2,7 @@
 
 namespace LibeyTechnicalTestDomain.LibeyUserAggregate.Application.Interfaces;
 
-public interface IUbigeoRepository
+public interface IRegionRepository
 {
-    List<UbigeoResponse> List(string provinceCode);
+    List<RegionResponse> List();
 }

@@ -1,6 +1,8 @@
-﻿namespace LibeyTechnicalTestDomain.LibeyUserAggregate.Application.Interfaces;
+﻿using LibeyTechnicalTestDomain.LibeyUserAggregate.Application.DTO;
 
-public class IProvinceRepository
+namespace LibeyTechnicalTestDomain.LibeyUserAggregate.Application.Interfaces;
+
+public interface IProvinceRepository
 {
-    
+    List<ProvinceResponse> List(string regionCode);
 }

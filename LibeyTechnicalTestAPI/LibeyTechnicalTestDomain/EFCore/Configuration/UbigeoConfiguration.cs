@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace LibeyTechnicalTestDomain.EFCore.Configuration;
 
-public class UbigeoConfiguration : IEntityTypeConfiguration<Ubigeo>
+internal class UbigeoConfiguration : IEntityTypeConfiguration<Ubigeo>
 {
     public void Configure(EntityTypeBuilder<Ubigeo> builder)
     {

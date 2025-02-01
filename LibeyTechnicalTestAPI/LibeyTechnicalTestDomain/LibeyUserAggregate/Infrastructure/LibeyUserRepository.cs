@@ -2,6 +2,8 @@
 using LibeyTechnicalTestDomain.LibeyUserAggregate.Application.DTO;
 using LibeyTechnicalTestDomain.LibeyUserAggregate.Application.Interfaces;
 using LibeyTechnicalTestDomain.LibeyUserAggregate.Domain;
+using Microsoft.EntityFrameworkCore;
+
 namespace LibeyTechnicalTestDomain.LibeyUserAggregate.Infrastructure
 {
     public class LibeyUserRepository : ILibeyUserRepository
@@ -11,6 +13,7 @@ namespace LibeyTechnicalTestDomain.LibeyUserAggregate.Infrastructure
         {
             _context = context;
         }
+
         public void Create(LibeyUser libeyUser)
         {
             _context.LibeyUsers.Add(libeyUser);
@@ -29,7 +32,7 @@ namespace LibeyTechnicalTestDomain.LibeyUserAggregate.Infrastructure
             _context.SaveChanges();
         }
 
-        public List<LibeyUserResponse> List()
+        public List<LibeyUserResponse> List(CancellationToken cancellationToken = default)
         {
             var q = from libeyUser in _context.LibeyUsers.Where(x => x.Active == true)
                 join ubigeo in _context.Ubigeos on libeyUser.UbigeoCode equals ubigeo.UbigeoCode

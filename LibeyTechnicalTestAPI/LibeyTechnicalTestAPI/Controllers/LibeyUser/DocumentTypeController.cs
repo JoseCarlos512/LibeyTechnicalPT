@@ -5,11 +5,11 @@ namespace LibeyTechnicalTestAPI.Controllers.LibeyUser;
 
 [ApiController]
 [Route("[controller]")]
-public class RegionController : Controller
+public class DocumentTypeController : Controller
 {
-    private readonly IRegionAggregate _aggregate;
+    private readonly IDocumentTypeAggregate _aggregate;
     
-    public RegionController(IRegionAggregate aggregate)
+    public DocumentTypeController(IDocumentTypeAggregate aggregate)
     {
         _aggregate = aggregate;
     }
@@ -17,7 +17,7 @@ public class RegionController : Controller
     [HttpGet]
     public IActionResult List()
     {
-        var row = _aggregate.GetRegions();
+        var row = _aggregate.GetDocumentTypes();
         return Ok(row);
     }
 }

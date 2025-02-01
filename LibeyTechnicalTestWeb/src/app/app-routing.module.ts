@@ -3,6 +3,7 @@ import { RouterModule, Routes } from "@angular/router";
 import { AppComponent } from "./app.component";
 import { UsercardsComponent } from "./User/user/usercards/usercards.component";
 import { UsermaintenanceComponent } from "./User/user/usermaintenance/usermaintenance.component";
+import { UsertableComponent } from "./User/user/usertable/usertable.component";
 const routes: Routes = [
 	{
 		path: "",
@@ -12,8 +13,11 @@ const routes: Routes = [
 	{
 		path: "user",
 		children: [
-			{ path: "card", component: UsercardsComponent },
-			{ path: "maintenance", component: UsermaintenanceComponent },
+			{ path: "principal", component: UsercardsComponent },
+			{ path: "listar", component: UsertableComponent },
+			
+			{ path: "crear", component: UsermaintenanceComponent },
+			{ path: "editar/:documentNumber", component: UsermaintenanceComponent },
 		],
 	},
 	{ path: "**", component: AppComponent },

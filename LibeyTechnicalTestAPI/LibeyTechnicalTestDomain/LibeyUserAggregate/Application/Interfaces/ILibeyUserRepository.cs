@@ -5,7 +5,7 @@ namespace LibeyTechnicalTestDomain.LibeyUserAggregate.Application.Interfaces
 {
     public interface ILibeyUserRepository
     {
-        List<LibeyUserResponse> List();
+        List<LibeyUserResponse> List(CancellationToken cancellationToken = default);
         LibeyUserResponse FindResponse(string documentNumber);
         void Create(LibeyUser libeyUser);
         void Update(LibeyUser libeyUser);
